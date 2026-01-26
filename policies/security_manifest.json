@@ -1,0 +1,13 @@
+{
+    "version": "1.0.0",
+    "last_updated": "2026-01-26",
+    "active_rules": [
+        {
+            "id": "baseline-001",
+            "action": "BLOCK",
+            "pattern": "ignore previous instructions",
+            "description": "Basic prompt injection block"
+        }
+    ],
+    "risk_appetite": "balanced"
+}
