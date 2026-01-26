@@ -55,21 +55,19 @@ As we move toward Level 4 and Level 5 Agentic AI, the speed of interaction has s
 The Solution: Resilient Intelligence
 
 PAI (Purple Agentic Intelligence) rejects this false dichotomy. Our mission is to build AI systems that possess a Synthetic Immune System. We believe that true intelligence must be self-aware, self-correcting, and self-defending.
-Our Core Pillars:
+The Core Pillars:
 
-    Adversarial Co-Evolution: Security is a living process. By pitting ART-T (Red) against AgenticBlue, we force the system to evolve its defenses in the crucible of simulated combat.
+* Adversarial Co-Evolution: Security is a living process. By pitting ART-T (Red) against AgenticBlue, we force the system to evolve its defenses in the crucible of simulated combat.
 
-    The Utility-Security Equilibrium: We do not build "Fortress AI" that is too locked down to be useful. We use the Pareto Front to ensure that every security patch preserves the core mission of the agent.
+* The Utility-Security Equilibrium: We do not build "Fortress AI" that is too locked down to be useful. We use the Pareto Front to ensure that every security patch preserves the core mission of the agent.
 
-    Zero-Trust Agency: We treat every agentic action as a hypothesis that must be verified. Through Async Shadow Auditing and Intent-Validation, we ensure that agents remain aligned even under adversarial pressure.
+* Zero-Trust Agency: We treat every agentic action as a hypothesis that must be verified. Through Async Shadow Auditing and Intent-Validation, we ensure that agents remain aligned even under adversarial pressure.
 
-    Autonomous Remediation: A vulnerability discovered at 3:00 AM should be patched by 3:01 AM. PAI enables systems to "heal" their own policy DNA without waiting for a human signature.
+* Autonomous Remediation: A vulnerability discovered at 3:00 AM should be patched by 3:01 AM. PAI enables systems to "heal" their own policy DNA without waiting for a human signature.
 
 The Vision
 
-We are building the foundation for Trusted Autonomy. PAI is not just a toolkit; it is the blueprint for the next generation of resilient digital entities that can think, act, and protect themselves in an increasingly complex adversarial landscape.
-
-    "We don't just build agents that work; we build agents that endure."
+To build the foundation for Trusted Autonomy. PAI is not just a toolkit; it is the blueprint for the next generation of resilient digital entities that can think, act, and protect themselves in an increasingly complex adversarial landscape.
 
 🧩 The Challenges: Navigating the Frontier
 
@@ -78,41 +76,41 @@ Building PAI isn't just an engineering task; it’s a battle against the inheren
 
 The most common failure mode for AgenticBlue is "Over-Correction." In its zeal to stop an attack, the Blue Agent may propose a patch so restrictive that the AI loses its ability to perform basic tasks.
 
-    The Risk: A perfectly secure AI that refuses to say "Hello" because it might be part of a social engineering attack.
+* The Risk: A perfectly secure AI that refuses to say "Hello" because it might be part of a social engineering attack.
 
-    Our Fix: The Utility Guardian and Pareto Front scoring.
+* The Fix: The Utility Guardian and Pareto Front scoring.
 
 2. Hallucinated Remediation
 
 Blue Agents are still LLMs. They can "hallucinate" security vulnerabilities or, worse, hallucinate the fix.
 
-    The Risk: The Blue Agent writes a regex or a policy rule that looks professional but actually creates a back door or crashes the system.
+* The Risk: The Blue Agent writes a regex or a policy rule that looks professional but actually creates a back door or crashes the system.
 
-    Our Fix: Mandatory Shadow Validation—every patch is tested in a sandbox against the Red Agent before deployment.
+* The Fix: Mandatory Shadow Validation—every patch is tested in a sandbox against the Red Agent before deployment.
 
 3. Agentic Collusion & Drift
 
 In a multi-agent system, there is a theoretical risk of "Reward Hacking" or collusion.
 
-    The Risk: AgenticRed and AgenticBlue might subconsciously evolve a "handshake" where Red performs weak attacks so Blue can easily "fix" them, making the system appear secure while the actual security posture stagnates.
+* The Risk: AgenticRed and AgenticBlue might subconsciously evolve a "handshake" where Red performs weak attacks so Blue can easily "fix" them, making the system appear secure while the actual security posture stagnates.
 
-    Our Fix: Introducing entropy and diverse "Red Primitives" from external benchmarks like UltraRAG.
+* The Fix: Introducing entropy and diverse "Red Primitives" from external benchmarks like UltraRAG.
 
 4. The Race Condition (Async Latency)
 
 As established in arXiv:2512.13526, async monitoring introduces a "Time-to-Detect" gap.
 
-    The Risk: An agent performs a malicious action (like deleting a cloud resource) in the 500ms before the Async Shield has finished its audit.
+* The Risk: An agent performs a malicious action (like deleting a cloud resource) in the 500ms before the Async Shield has finished its audit.
 
-    Our Fix: Implementing "Soft-Commit" tool calls—actions are staged but not finalized until the auditor gives a green light.
+* The Fix: Implementing "Soft-Commit" tool calls—actions are staged but not finalized until the auditor gives a green light.
 
 5. Infinite Remediation Loops
 
 When an autonomous system starts patching its own code, there is a risk of a recursive loop.
 
-    The Risk: A patch causes a minor utility drop -> which triggers a "fix" -> which opens a new security hole -> which triggers a patch.
+* The Risk: A patch causes a minor utility drop -> which triggers a "fix" -> which opens a new security hole -> which triggers a patch.
 
-    Our Fix: The Recovery Manager and a maximum "Patch Depth" limit per 24-hour cycle.
+* The Fix: The Recovery Manager and a maximum "Patch Depth" limit per 24-hour cycle.
 
 🛡️ Why we do it anyway
 
