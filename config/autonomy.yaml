@@ -1,0 +1,7 @@
+# PAI — modo de autonomia
+# propose_only (padrão): o Blue propõe patches como PR; humano aprova.
+# auto_with_rollback: aplica com snapshot prévio e rollback automático (experimental).
+# auto: aplica sem rollback (experimental, não recomendado em produção).
+autonomy: propose_only
+patch_depth_max_24h: 3
+utility_epsilon: 10
