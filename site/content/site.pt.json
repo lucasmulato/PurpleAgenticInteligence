@@ -1,0 +1,115 @@
+{
+  "lang": "pt-BR",
+  "siteUrl": "",
+  "meta": {
+    "title": "Auditoria de Ações de Agentes de IA — PAI",
+    "description": "Escopo fechado para mapear o que um agente de IA pode executar, testar injeção de prompt e entregar uma política executável."
+  },
+  "nav": [
+    { "href": "#demo", "label": "Demo" },
+    { "href": "#como-funciona", "label": "Como funciona" },
+    { "href": "#auditoria", "label": "Auditoria" },
+    { "href": "#climara", "label": "Pequenos negócios" },
+    { "href": "#contato", "label": "Contato" }
+  ],
+  "hero": {
+    "eyebrow": "PAI · segurança de agentes",
+    "title": "Agentes de IA executam ações. Uma injeção pode custar caro.",
+    "subtitle": "O SAFE-AI decide antes da execução: PERMIT, REJECT ou ASK_HUMAN. Auditamos as ações do seu agente e entregamos uma política executável.",
+    "primary": { "label": "Ver demo de 90 segundos", "href": "#demo" },
+    "secondary": { "label": "Pedir auditoria", "href": "#contato" },
+    "note": "Sem promessa de conformidade legal. Evidências e limites explícitos."
+  },
+  "demo": {
+    "title": "Veja o gateway decidir",
+    "text": "Quatro casos reais do script: leitura comum, exfiltração, injeção de prompt em resposta de prospect e ação que exige aprovação humana.",
+    "transcriptTitle": "Transcrição real do terminal (ainda não há vídeo)",
+    "transcriptFile": "demo-transcript.txt"
+  },
+  "how": {
+    "title": "Como funciona",
+    "steps": [
+      { "title": "Gate determinístico", "text": "Política local, sem heurística de modelo: comandos fora das listas são rejeitados." },
+      { "title": "Três decisões", "text": "PERMIT passa, REJECT bloqueia, ASK_HUMAN espera uma pessoa." },
+      { "title": "Trilha de auditoria", "text": "Cada decisão fica registrada com quem pediu, o comando e o motivo." }
+    ]
+  },
+  "audit": {
+    "title": "Auditoria de Ações de Agentes",
+    "intro": "Escopo fechado em cinco etapas: inventário, mapa de riscos, política executável, testes adversariais e relatório em português.",
+    "deliverables": [
+      "Relatório com achados e limites",
+      "Arquivo de política no formato do SAFE-AI",
+      "Evidências dos testes, incluindo injeção de prompt",
+      "Lista explícita do que não foi examinado"
+    ],
+    "priceLabel": "A partir de",
+    "priceFrom": "",
+    "priceEmpty": "Valor definido no escopo, caso a caso.",
+    "cta": "Pedir auditoria"
+  },
+  "finance": {
+    "title": "Para fintechs e financeiras",
+    "text": "Exemplo baseado no pacote imobiliário do LLM-SEC. Isto é demonstração de política, não regra do seu cliente.",
+    "exampleLabel": "Exemplo — não é regra do cliente",
+    "items": [
+      { "label": "Teto de LTV", "value": "definido pelo cliente e por fonte oficial" },
+      { "label": "Piso de DSCR", "value": "definido pelo cliente" },
+      { "label": "Dupla autorização", "value": "assinatura Ed25519 de duas pessoas" }
+    ],
+    "note": "CONF-2 (Reproducible) overall; CONF-3 (Bounded Model Checking) for core protocol. Sem aumentar o claim."
+  },
+  "limits": {
+    "title": "Limites conhecidos",
+    "items": [
+      "A política é local: comandos fora das listas são rejeitados, mas permissões amplas dependem do que você configurar.",
+      "Comandos compostos com ;, &&, pipes ou $(...) são rejeitados — isso é estrutural, não análise semântica.",
+      "O gateway avalia a intenção; não executa comandos nem verifica efeitos colaterais.",
+      "Não há autenticação embutida; rode em rede controlada.",
+      "Auditoria em SQLite local, sem assinatura criptográfica. Não é garantia legal."
+    ]
+  },
+  "research": {
+    "title": "Pesquisa",
+    "question": "É possível gerar patches de política que aumentem resistência a ataques sem reduzir a utilidade em tarefas reais abaixo de um limite aceitável, mantendo aprovação humana por padrão?",
+    "milestones": [
+      "Baseline de utilidade e trava de patches publicados com testes",
+      "Política gerada validada contra o SAFE-AI em CI",
+      "Primeira medição de resistência com suíte adversarial reproduzível"
+    ],
+    "note": "Nenhum resultado de benchmark foi medido até hoje."
+  },
+  "climara": {
+    "title": "Para pequenos negócios",
+    "text": "A Climara constrói sites claros, rápidos e adaptados ao celular. Três opções, escolha conforme o momento do negócio.",
+    "supportLabel": "Suporte opcional",
+    "plans": [
+      { "name": "Essencial", "price": "R$ 397", "support": "R$ 59,55/mês", "items": ["Página objetiva", "Informações do negócio", "Contato direto", "Adaptado ao celular"] },
+      { "name": "Profissional", "price": "R$ 997", "support": "R$ 149,55/mês", "items": ["Mais seções", "Design personalizado", "Serviços explicados", "Formulário e integrações básicas"] },
+      { "name": "Premium", "price": "R$ 1.697", "support": "R$ 254,55/mês", "items": ["Estrutura sob medida", "Catálogo ou recursos comerciais", "Funcionalidades em escopo", "Mais etapas de revisão"] }
+    ]
+  },
+  "contact": {
+    "title": "Contato",
+    "email": "",
+    "emailNote": "E-mail oficial a definir.",
+    "whatsapp": "5511988869469",
+    "whatsappLabel": "Falar no WhatsApp",
+    "note": "Nenhum formulário com backend nesta versão."
+  },
+  "footer": {
+    "privacy": "Privacidade: sem cookies de rastreamento e sem analytics de terceiros. Dados pessoais não são coletados por este site.",
+    "note": "Textos editáveis em content/site.pt.json."
+  },
+  "pai": {
+    "title": "PAI — Purple Agentic Intelligence",
+    "text": "Página de pesquisa, fora da navegação principal. O núcleo testável inclui Utility Guardian, trava de patches, rollback com dry-run e modo padrão propose_only.",
+    "note": "Pesquisa em andamento: async shield, Pareto e auto-patch como PR não são funcionalidades entregues.",
+    "linksLabel": "Repositórios",
+    "links": [
+      { "label": "PAI", "href": "https://github.com/lucasmulato/PurpleAgenticInteligence" },
+      { "label": "SAFE-AI", "href": "https://github.com/lucasmulato/SAFE-AI" },
+      { "label": "LLM-SEC", "href": "https://github.com/lucasmulato/LLM-SEC" }
+    ]
+  }
+}
