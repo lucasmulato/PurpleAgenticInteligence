@@ -1,0 +1,115 @@
+{
+  "lang": "en",
+  "siteUrl": "",
+  "meta": {
+    "title": "AI Agent Action Audit — PAI",
+    "description": "Fixed-scope audit of what an AI agent can execute, with prompt-injection tests and an executable policy."
+  },
+  "nav": [
+    { "href": "#demo", "label": "Demo" },
+    { "href": "#how", "label": "How it works" },
+    { "href": "#audit", "label": "Audit" },
+    { "href": "#climara", "label": "Small businesses" },
+    { "href": "#contact", "label": "Contact" }
+  ],
+  "hero": {
+    "eyebrow": "PAI · agent security",
+    "title": "AI agents execute actions. One injection can be expensive.",
+    "subtitle": "SAFE-AI decides before execution: PERMIT, REJECT or ASK_HUMAN. We audit your agent's actions and deliver an executable policy.",
+    "primary": { "label": "See the 90-second demo", "href": "#demo" },
+    "secondary": { "label": "Request an audit", "href": "#contact" },
+    "note": "No legal compliance guarantee. Evidence and explicit limits."
+  },
+  "demo": {
+    "title": "Watch the gateway decide",
+    "text": "Four real cases from the script: a normal read, exfiltration, prompt injection in a prospect reply, and an action that needs human approval.",
+    "transcriptTitle": "Real terminal transcript (no video yet)",
+    "transcriptFile": "demo-transcript.txt"
+  },
+  "how": {
+    "title": "How it works",
+    "steps": [
+      { "title": "Deterministic gate", "text": "Local policy, no model heuristic: commands outside the lists are rejected." },
+      { "title": "Three decisions", "text": "PERMIT passes, REJECT blocks, ASK_HUMAN waits for a person." },
+      { "title": "Audit trail", "text": "Every decision records who asked, the command and the reason." }
+    ]
+  },
+  "audit": {
+    "title": "AI Agent Action Audit",
+    "intro": "Fixed scope in five steps: inventory, risk map, executable policy, adversarial tests and a report in Portuguese.",
+    "deliverables": [
+      "Report with findings and limits",
+      "Policy file in SAFE-AI format",
+      "Test evidence, including prompt injection",
+      "Explicit list of what was not examined"
+    ],
+    "priceLabel": "Starting at",
+    "priceFrom": "",
+    "priceEmpty": "Price agreed in the scope document, case by case.",
+    "cta": "Request an audit"
+  },
+  "finance": {
+    "title": "For fintechs and lenders",
+    "text": "Example based on the LLM-SEC real-estate pack. This is a policy demonstration, not a rule for your client.",
+    "exampleLabel": "Example — not a client rule",
+    "items": [
+      { "label": "LTV cap", "value": "set by the client and an official source" },
+      { "label": "DSCR floor", "value": "set by the client" },
+      { "label": "Dual authorization", "value": "Ed25519 signature by two people" }
+    ],
+    "note": "CONF-2 (Reproducible) overall; CONF-3 (Bounded Model Checking) for core protocol. Claim not increased."
+  },
+  "limits": {
+    "title": "Known limits",
+    "items": [
+      "Policy is local: unknown commands are rejected, but broad permissions depend on what you configure.",
+      "Composed commands with ;, &&, pipes or $(...) are rejected — structural, not semantic analysis.",
+      "The gateway judges intent; it does not execute commands or verify side effects.",
+      "No built-in authentication; run on a controlled network.",
+      "Local SQLite audit, no cryptographic signature. Not a legal guarantee."
+    ]
+  },
+  "research": {
+    "title": "Research",
+    "question": "Can we generate policy patches that increase resistance to attacks without dropping utility on real tasks below an acceptable limit, while keeping human approval by default?",
+    "milestones": [
+      "Utility baseline and patch-depth lock published with tests",
+      "Generated policy validated against SAFE-AI in CI",
+      "First resistance measurement with a reproducible adversarial suite"
+    ],
+    "note": "No benchmark result has been measured yet."
+  },
+  "climara": {
+    "title": "For small businesses",
+    "text": "Climara builds clear, fast, mobile-first websites. Three options — choose the one that fits your moment.",
+    "supportLabel": "Optional support",
+    "plans": [
+      { "name": "Essential", "price": "R$ 397", "support": "R$ 59.55/month", "items": ["One clear page", "Business information", "Direct contact", "Mobile-first layout"] },
+      { "name": "Professional", "price": "R$ 997", "support": "R$ 149.55/month", "items": ["More sections", "Custom design", "Services explained", "Form and basic integrations"] },
+      { "name": "Premium", "price": "R$ 1,697", "support": "R$ 254.55/month", "items": ["Tailored structure", "Catalog or business features", "Scoped functionality", "More review steps"] }
+    ]
+  },
+  "contact": {
+    "title": "Contact",
+    "email": "",
+    "emailNote": "Official email to be defined.",
+    "whatsapp": "5511988869469",
+    "whatsappLabel": "Talk on WhatsApp",
+    "note": "No backend form in this version."
+  },
+  "footer": {
+    "privacy": "Privacy: no tracking cookies and no third-party analytics. This site collects no personal data.",
+    "note": "Texts editable in content/site.en.json."
+  },
+  "pai": {
+    "title": "PAI — Purple Agentic Intelligence",
+    "text": "Research page, outside the main navigation. The testable core includes Utility Guardian, patch-depth lock, rollback dry-run and propose_only as default mode.",
+    "note": "Research in progress: async shield, Pareto and auto-patch as PR are not delivered features.",
+    "linksLabel": "Repositories",
+    "links": [
+      { "label": "PAI", "href": "https://github.com/lucasmulato/PurpleAgenticInteligence" },
+      { "label": "SAFE-AI", "href": "https://github.com/lucasmulato/SAFE-AI" },
+      { "label": "LLM-SEC", "href": "https://github.com/lucasmulato/LLM-SEC" }
+    ]
+  }
+}
