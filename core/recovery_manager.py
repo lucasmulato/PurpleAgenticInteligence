@@ -4,9 +4,9 @@ import shutil
 from datetime import datetime
 
 class RecoveryManager:
-    def __init__(self, policy_path="policies/security_manifest.json", backup_dir="backups/"):
-        self.policy_path = policy_path
-        self.backup_dir = backup_dir
+    def __init__(self, policy_path=None, backup_dir=None):
+        self.policy_path = os.getenv("PAI_POLICY_PATH", policy_path or "policies/security_manifest.json")
+        self.backup_dir = os.getenv("PAI_BACKUP_DIR", backup_dir or "backups/")
         os.makedirs(self.backup_dir, exist_ok=True)
 
     def create_snapshot(self, trigger_event: str):

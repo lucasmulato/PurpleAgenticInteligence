@@ -1,6 +1,17 @@
 import asyncio
 import json
-from utility_guardian import UtilityGuardian
+from pathlib import Path
+
+try:  # execução como pacote (testes)
+    from core.autonomy import is_autonomous, load_mode
+    from core.patch_control import PatchController
+    from core.policy_patch import write_safe_ai_policy
+    from core.utility_guardian import UtilityGuardian
+except ImportError:  # execução direta: python3 core/orchestrator.py
+    from autonomy import is_autonomous, load_mode
+    from patch_control import PatchController
+    from policy_patch import write_safe_ai_policy
+    from utility_guardian import UtilityGuardian
 
 # Mocking MCP Client calls for standalone execution
 async def mcp_call(agent, tool, **kwargs):
@@ -40,15 +51,30 @@ class PurpleOrchestrator:
         validation = await self.guardian.validate_patch(patch_candidate, None)
         print(f"[⚖️ Guardian] Verdict: {validation['status']} (Utility: {validation['utility']}%)")
 
-        # 4. COMMIT PHASE
-        if validation['status'] == "APPROVED":
-            self.commit_patch(patch_candidate)
-        else:
+        # 4. HUMAN GATE + PATCH DEPTH
+        if validation['status'] != "APPROVED":
             print("[!] Patch Rejected. Requesting Blue Agent to refine strategy...")
+            return
+
+        mode = load_mode()
+        if not is_autonomous(mode):
+            print("[⚖] Modo propose_only: patch proposto como PR; humano aprova.")
+            return
+
+        controller = PatchController()
+        allowed, reason = controller.can_patch()
+        if not allowed:
+            print(f"[!] {reason}")
+            return
+
+        controller.record(patch_candidate["id"])
+        self.commit_patch(patch_candidate)
 
     def commit_patch(self, patch):
-        print(f"[✅] SUCCESS: Patch {patch['id']} committed to Security Manifest.")
-        # Actual file I/O would happen here to update security_manifest.json
+        """Escreve a política proposta em drafts/ — nunca sobrescreve o manifesto."""
+        target = Path("drafts") / f"policy-{patch['id']}.yaml"
+        write_safe_ai_policy(patch, str(target))
+        print(f"[✅] Política proposta escrita em {target} (manifesto inalterado).")
 
 if __name__ == "__main__":
     orchestrator = PurpleOrchestrator()
