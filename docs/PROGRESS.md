@@ -25,3 +25,24 @@ python3 core/orchestrator.py
 Pendente: confirmar "AI Safety Residency 2026"/"Private R&D"; medir `S`
 (suíte adversarial) — hoje é "não medido"; validar a política gerada com o
 SAFE-AI em CI entre repos; renomear o repo depende de aprovação do Lucas.
+
+## Fase 3 — 2026-11-24
+
+Branch `feat/fase3` (merge de `feat/fase2` para manter os testes verdes).
+
+Mudou: pasta `service/` com escopo em 5 etapas, templates de relatório e
+política, checklist de inventário (15 perguntas), vertical financeiro com
+exemplo do pacote imobiliário do LLM-SEC, one-pagers PT/EN, proposta
+white-label e checklist LGPD. Sem números inventados, sem promessa de
+conformidade, sem nomes de empresas como clientes.
+
+Como testar:
+
+```
+cd /home/admin/PAI
+/tmp/opencode/pai-venv/bin/python -m pytest -q
+# 16 passed
+```
+
+Pendente: definir canal de contato oficial do serviço; preço e prazo case a
+case; revisão jurídica do checklist LGPD.

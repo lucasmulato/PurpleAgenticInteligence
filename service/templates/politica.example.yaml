@@ -1,0 +1,16 @@
+# Exemplo de política para o SAFE-AI — NÃO é uma política de cliente.
+# Substitua pelos limites acordados no escopo; nunca copie sem revisão.
+permit:
+  - ls
+  - pwd
+  - cat
+ask_human:
+  - rm
+  - chmod
+  - ssh
+reject:
+  - curl
+  - wget
+  - nc
+  - bash -i
+  - python -c
